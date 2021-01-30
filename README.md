@@ -325,43 +325,77 @@ Constructor Injection과 다르게 Field Injection은 final을 선언할 수 없
 
 * 안전한 싱글톤 클래스 이용 
 1. Thread safe Lazy initialization (게으른 초기화)
-[
-public class ThreadSafeLazyInitialization{
- 
+private static으로 인스턴스 변수를 만들고 private 생성자로 외부에서 생성을 막았으며 synchronized 키워드를 사용해서 thread-safe하게 만들었다.
+하지만 synchronized 특성상 비교적 큰 성능저하가 발생하므로 권장하지 않는 방법이다.
     private static ThreadSafeLazyInitialization instance;
- 
     private ThreadSafeLazyInitialization(){}
-     
     public static synchronized ThreadSafeLazyInitialization getInstance(){
         if(instance == null){
             instance = new ThreadSafeLazyInitialization();
         }
         return instance;
     }
- 
-}
-]
-
-private static으로 인스턴스 변수를 만들고 private 생성자로 외부에서 생성을 막았으며 synchronized 키워드를 사용해서 thread-safe하게 만들었다.
-하지만 synchronized 특성상 비교적 큰 성능저하가 발생하므로 권장하지 않는 방법이다.
 synchronizeds는 공유 데이터를 사용하는 코드 영역을 임계 영역으로 지정해놓고, 공유 데이터(객체)가 가지고 있는 lock을 
 획득한 단 하나의 스레드만 이 영역 내의 코드를 수행 할 수 있게 한다. 즉 스레드의 동기화 
 2. Thread safe lazy initialization + Double-checked locking
+getInstance()에 synchronized를 사용하는 것이 아니라 첫 번째 if문으로 인스턴스의 존재여부를 체크하고 두 번째 if문에서 다시 한번 체크할 때 동기화 시켜서 인스턴스를 생성하므로 thread-safe하면서도 처음 생성 이후에 synchonized 블럭을 타지 않기 때문에 성능저하를 완화했다.
+    public static ThreadSafeLazyInitialization getInstance(){
+        if(instance == null){
+            synchronized (ThreadSafeLazyInitialization.class) {
+                if(instance == null)
+                    instance = new ThreadSafeLazyInitialization();
+            }
+        }
+        return instance;
+    }
+3. Initialization on demand holder idiom (holder에 의한 초기화)
+클래스안에 클래스(Holder)를 두어 JVM의 Class loader 매커니즘과 Class가 로드되는 시점을 이용한 방법
+public class Something {
+    private Something() {
+    }
+ 
+    private static class LazyHolder {
+        public static final Something INSTANCE = new Something();
+    }
+ 
+    public static Something getInstance() {
+        return LazyHolder.INSTANCE;
+    }
+}
+holder안에 선언된 instance가 static이기 때문에 클래스 로딩시점에 한번만 호출될 것이며 final을 사용해 다시 값이 할당되지 않도록 만든 방법.
 
 
-출처: https://jeong-pro.tistory.com/86 [기본기를 쌓는 정아마추어 코딩블로그]
+
+### Q16. @Lombok 애노테이션에 대해 설명하시오.
+Lombok은 Annotation을 이용해 Getter, Setter, Builder등을 만들어주는 라이브러리이다.
+ @NoArgsConstructor 어노테이션은 파라미터가 없는 기본 생성자를 생성해주고, @AllArgsConstructor 어노테이션은 모든 필드 값을 파라미터로 받는 생성자를 만들어줍니다. 
+ 마지막으로 @RequiredArgsConstructor 어노테이션은 final이나 @NonNull인 필드 값만 파라미터로 받는 생성자를 만들어줍니다.
+
+### (꼬리) @Builder 패턴 
+Builder 패턴의 목적은 유동적으로 필드에 값을 세팅하고, 객체를 생성한 후, 변경불가능 상태로 만드는 것이에요.
+각 인자가 어떤 의미인지 알기 쉽다. 한 번에 객체를 생성하므로 객체 일관성이 깨지지 않는다.
+
+### (꼬리) CommandLineRunner 사용 이유?
+스프링 부트 애플리케이션 구동 시점에 특정 코드 실행하기 위해 .
+CommandLineRunner 인터페이스는 구동 시점에 실행되는 코드가 자바 문자열 아규먼트 배열에 접근해야할 필요가 있는 경우에 사용합니다. 다음과 같이 CommandLineRunner 인터페이스를 구현한 클래스에 @Component 어노테이션을 선언해두면 컴포넌트 스캔이되고 구동 시점에 run 메소드의 코드가 실행됩니다.
+
+### Q17. 과제 중, 왜 BigDecimal을 사용하였는지 서령하시오. 
+BigDecimal은 Java 언어에서 숫자를 정밀하게 저장하고 표현할 수 있는 유일한 방법이며, 
+금융권 계정계 운영 업무 수행 할떄, 오차 없이 실수를 표현하기 위해 해당 자료형을 사용 
+
+### Q18. Native Query 사용 이유 
+JPQL은 표준 SQL이 지원하는 대부분의 문법과 SQL 함수들을 지원하지만
+특정 데이터베이스에 종속적인 기능은 지원하지 않음 (Ex.
+
+- 특정 데이터베이스만 지원하는 함수, 문법, SQL 쿼리 힌트
+- 인라인 뷰, UNION, INTERSECT
+- 스토어드 프로시저
 
 
-출처: https://jeong-pro.tistory.com/86 [기본기를 쌓는 정아마추어 코딩블로그]
-
-
-
-스프링에서 의존성 주입을 사용하는 이유, 장점, 
-싱글톤 패턴의 문제점 
-
-과제 
-@runwith 어노테이셩
-@Lombok @Builder 이용 
-entitiymanger와 nativeQuery
+다양한 이유로 JPQL을 사용할 수 없을 때,
+JPA는 Native SQL을 통해 SQL을 직접 사용할 수 있는 기능을 제공.
+- SQL을 개발자가 직접 정의
+- 네이티브 SQL 사용 시 엔티티를 조회하고, JPA가 지원하는 영속성 컨텍스트의 기능을 그대로 사용 가능
+ 
 
 
