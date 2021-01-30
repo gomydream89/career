@@ -325,7 +325,7 @@ Constructor Injection과 다르게 Field Injection은 final을 선언할 수 없
 
 * 안전한 싱글톤 클래스 이용 
 1. Thread safe Lazy initialization (게으른 초기화)
-{
+[
 public class ThreadSafeLazyInitialization{
  
     private static ThreadSafeLazyInitialization instance;
@@ -340,7 +340,7 @@ public class ThreadSafeLazyInitialization{
     }
  
 }
-}
+]
 
 private static으로 인스턴스 변수를 만들고 private 생성자로 외부에서 생성을 막았으며 synchronized 키워드를 사용해서 thread-safe하게 만들었다.
 하지만 synchronized 특성상 비교적 큰 성능저하가 발생하므로 권장하지 않는 방법이다.
