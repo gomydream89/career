@@ -14,3 +14,10 @@
  - outer-EnvironmentReference : 현재 호출된 함수가 선언될 당시의 LexicalEnvironment 참조.
 
 * 스코프(Scope) : 식별자에 대한 유효범위, 식별자의 유효범위를 안에서부터 바깥으로 차례로 검색해나가는것을 스코프 체인이라한다.
+
+ * this : 실행컨텍스트가 생성될떄, 함께 결정되는 즉 this는 함수를 호출할때 결정된다.
+  - 전역공간 : window
+  - 함수호출시 : window ex) outer();
+  - 메소드호출시 : 메소드 호출 주체(메소드 명 앞) ex) x.outer(); -> x가 this
+  - callback 호출 시: 기본적으로 함수 내부에서와 동일
+  - 생성자 함수 호출 시: 인스턴스 
