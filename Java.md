@@ -36,8 +36,7 @@ major에서는 old 영역을 대상으로 실행됩니다. minor에 비해 시�
    JVM은 이 메로리를 용도에 따라 여러 영억으로 나누어 관리
 2. 자바 컴파일러가 자바 소소코드를 읽어들여 자바 바이트코드(.CLASS)로 변환시킨다.
 3. Class Loader를 통해 class파일들을 JVM으로 로딩하낟.
-4. 로딩된 class파일들은 Excution Engine 을 통해 해석된다.
-5. 해석된 바이트코드는 RunTime Data Areas 에 배치되어 실질적인 수행이 이루어지게 된다. 
+4. 로딩된 class파일들은 RunTime Data Areas 에 배치되어 Excution Engine 을 통해 해석된다.
 
 ## JVM 구조
 * Class Loader
