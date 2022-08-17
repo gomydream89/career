@@ -16,7 +16,7 @@
 4) 다형성
 서로 다른 클래스의 객체가 같은 메시지를 받았을 때 각자의 방식으로 동작하는 능력
 
-* OOP의 5대 원칙(SOLID)
+#### OOP의 5대 원칙(SOLID)
 - S: 단일 책임 원칙(SRP, Single Responsibility Principle) 객체는 단 하나의 책임만 가져야 한다. 
 - O: 개방-폐쇄 원칙(OCP, Open Closed Principle) 기존의 코드를 변경하지 않으면서 기능을 추가할 수 있도록 설계가 되어야 한다. 
 - L: 리스코프 치환 원칙(LSP, Liskov Substitution Principle) 일반화 관계에 대한 이야기며, 자식 클래스는 최소한 자신의 부모 클래스에서 가능한 행위는 수행할 수 있어야 한다. 
