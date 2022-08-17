@@ -29,17 +29,17 @@ REST의 요소로는 크게 리소스, 메소드, 메세지 3가지 요소로 �
 메소드는 HTTP Post, 메세지는 JSON 문서를 이용해서 표현됩니다. HTTP에는 여러가지 메소드가 있지만 REST에서는 CRUD에 해당하는 4가지의 메소드 GET, POST, PUT, DELETE를 사용합니다. 
 REST는 리소스 지향 아키텍쳐 스타일이라는 정의에 맞게 모든 것을 명사로 표현하며 각 세부 리소스에는 id를 붙입니다. 
 
-PathVariable 과 ReqeustParam 차이 
-5. ResquestBody
-6. @ResponseStatus(HttpStatus.NOT_FOUND)
-7. ResponseEntity
-8. 
+### PathVariable 과 ReqeustParam 차이 
+### ResquestBody
+### @ResponseStatus(HttpStatus.NOT_FOUND)
+### ResponseEntity
 
+### OAuth2 인증방식 (OAuth2 인증을 통한 공공 open Api 이용)
+### Spring AOP / ExceptioHandler, ControllAdvice 
+https://ch4njun.tistory.com/220
 
-5. OAuth2 인증방식 (OAuth2 인증을 통한 공공 open Api 이용)
-6. Spring AOP / ExceptioHandler, ControllAdvice 
-7. HATEOS / Rest API 단계 
-8. uri는 동사형 보다는 명사형 / 하나의 uri 주소로 안에 http 메소드로 기능분리 
+### HATEOS / Rest API 단계 
+### uri는 동사형 보다는 명사형 / 하나의 uri 주소로 안에 http 메소드로 기능분리 
 
 
 OAuth2 정의 
