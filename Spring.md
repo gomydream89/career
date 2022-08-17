@@ -133,3 +133,7 @@ Constructor Injection과 다르게 Field Injection은 final을 선언할 수 없
 2. session: 웹 세션이 생성되고 종료될 때 까지 유지되는 스코프이다.
 3. application: 웹의 서블릿 컨텍스트와 같은 범위로 유지되는 스코프이다.
 
+#### 스프링의 MVC 패턴 비교 
+(참고) MVC1 VS MVC2 
+https://chanhuiseok.github.io/posts/spring-3/
+
