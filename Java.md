@@ -1,5 +1,5 @@
 # Java-Interview-QnA
-자바 면접 질문과 답
+(참고) https://github.com/JIHYE0705/Interview_Question_for_Beginner/tree/master/Java#wrapper-class
 
 ### Q0. 자바(java)의 장단점을 설명하시오.
 장 : 독립적/객체지향언어/메모리관리/오픈소스 /멀티스레드 / 동적로딩 
