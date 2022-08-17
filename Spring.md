@@ -9,3 +9,7 @@
 6. Spring AOP / ExceptioHandler, ControllAdvice 
 7. HATEOS / Rest API 단계 
 8. uri는 동사형 보다는 명사형 / 하나의 uri 주소로 안에 http 메소드로 기능분리 
+
+
+
+https://cheese10yun.github.io/spring-oauth2-provider/
