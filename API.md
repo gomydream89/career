@@ -48,3 +48,7 @@ https://cheese10yun.github.io/spring-oauth2-provider/
 
 Rest 정의 
 https://velog.io/@mystyle730/Chapter16-ResponseEntity-RESTful%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9C%A0-%EA%B7%9C%EC%95%BD-%EA%B5%AC%EC%A1%B0
+
+### Swagger
+API 설계, 개발, 문서화, 테스트를 통해 API Spec을 명세화, 관리할 수 있는 프레임워크로 알고 있습니다.
+
