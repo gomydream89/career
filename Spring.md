@@ -46,6 +46,7 @@ BeanFactory : 스프링 빈을 관리하고 조회하는 역할을 담당한다.
 
 #### AOP란?
 관심지향 프로그래밍 기법(AOP, Aspect Oriented Programming) 애플리케이션의 핵심적인 기능과 부가적인 기능을 분리해 Aspect라는 모듈로 만들어 설계하고 개발하는 방법입니다.
+(참고) aop 와 ExceptionHandler -> https://ch4njun.tistory.com/220
 
 #### 의존성이란?
 의존관계를 가지는 상황 A 클래스가 B 클래스를 내부적으로 사용하는 경우를 말한다. B 클래스가 변경되면 기존의 A클래스에도 영향이 간다. 
