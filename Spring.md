@@ -11,5 +11,9 @@
 8. uri는 동사형 보다는 명사형 / 하나의 uri 주소로 안에 http 메소드로 기능분리 
 
 
-
+OAuth2 정의 
 https://cheese10yun.github.io/spring-oauth2-provider/
+
+
+Rest 정의 
+https://velog.io/@mystyle730/Chapter16-ResponseEntity-RESTful%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9C%A0-%EA%B7%9C%EC%95%BD-%EA%B5%AC%EC%A1%B0
