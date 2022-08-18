@@ -56,6 +56,16 @@ REST의 요소로는 크게 리소스, 메소드, 메세지 3가지 요소로 �
 메소드는 HTTP Post, 메세지는 JSON 문서를 이용해서 표현됩니다. HTTP에는 여러가지 메소드가 있지만 REST에서는 CRUD에 해당하는 4가지의 메소드 GET, POST, PUT, DELETE를 사용합니다. 
 REST는 리소스 지향 아키텍쳐 스타일이라는 정의에 맞게 모든 것을 명사로 표현하며 각 세부 리소스에는 id를 붙입니다. 
 
+### HATEOAS 
+Hypermedia As The Engine Of Application State
+HATEOAS라는 개념을 통해, 자원에 호출 가능한 API 정보를 자원의 상태를 반영하여 표현하는것이다.
+Application의 상태(State)는 Hyperlink를 통해 전이되어야 함, 서버는 현재 이용 가능한 다른 작업에 대한 하이퍼링크를 포함하여 응답해야 함.
+
+(참고) https://wonit.tistory.com/454 HATEOAS 를 이용한 REST API 
+
+![image](https://user-images.githubusercontent.com/46310329/185293323-2072a60c-8c7e-4fce-a082-eaa18e4b55f5.png)
+
+
 ### @RestController
 (참고) Controller Vs RestController : https://mangkyu.tistory.com/49
 * @RestController는 @Controller에 @ResponseBody가 추가된 것입니다. 당연하게도 RestController의 주용도는 Json 형태로 객체 데이터를 반환하는 것입니다. 
@@ -84,21 +94,13 @@ Spring Framework에서 제공하는 클래스 중 HttpEntity라는 클래스가 
 HttpEntity 클래스를 상속받아 구현한 클래스가ResponseEntity 클래스이다. 
 ResponseEntity는 사용자의 HttpRequest에 대한 응답 데이터를 포함하는 클래스이다. 따라서 HttpBody, HttpHeaders, HttpStatus를 포함한다. 
 
-![image](https://user-images.githubusercontent.com/46310329/185289416-8b684f1c-a114-4437-9bc8-69cfeac369d9.png)
 
 ### OAuth2 인증방식 (OAuth2 인증을 통한 공공 open Api 이용)
-### Spring AOP / ExceptioHandler, ControllAdvice 
-https://ch4njun.tistory.com/220
-
-### HATEOS / Rest API 단계 
-### uri는 동사형 보다는 명사형 / 하나의 uri 주소로 안에 http 메소드로 기능분리 
-
 
 OAuth2 정의 
 https://cheese10yun.github.io/spring-oauth2-provider/
 
-
-Rest 정의 
+### 마이데이터 동작 방식 
 
 
 ### Swagger
