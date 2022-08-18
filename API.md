@@ -101,7 +101,7 @@ OAuth2 정의
 https://cheese10yun.github.io/spring-oauth2-provider/
 
 Oauth2 를 구현
-https://autumnly.tistory.com/64?category=813931
+https://withseungryu.tistory.com/108?category=890878
 
 ### 마이데이터 동작 방식 
 * 데이터 표현 규격 - JSON/UTF-8
