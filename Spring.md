@@ -138,3 +138,6 @@ Constructor Injection과 다르게 Field Injection은 final을 선언할 수 없
 (참고) MVC1 VS MVC2 
 https://chanhuiseok.github.io/posts/spring-3/
 
+### Spring AOP / ExceptioHandler, ControllAdvice 
+https://ch4njun.tistory.com/220
+
