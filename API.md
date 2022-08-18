@@ -34,14 +34,19 @@ REST는 리소스 지향 아키텍쳐 스타일이라는 정의에 맞게 모든
 @RestController는 @Controller에 @ResponseBody가 추가된 것입니다. 당연하게도 RestController의 주용도는 Json 형태로 객체 데이터를 반환하는 것입니다. 
 최근에 데이터를 응답으로 제공하는 REST API를 개발할 때 주로 사용하며 객체를 ResponseEntity로 감싸서 반환합니다. 
 
+![image](https://user-images.githubusercontent.com/46310329/185289468-80313b36-cf86-4519-8851-0b4234a9515d.png)
 
-https://blog.kakaocdn.net/dn/H03z4/btrx1IGclWg/cMTcF0HrJBYiahwCPsFME0/img.png
+1. Client는 URI 형식으로 웹 서비스에 요청을 보낸다.
+2. DispatcherServlet이 요청을 위임할 HandlerMapping을 찾는다.
+3. HandlerMapping을 통해 요청을 Controller로 위임한다.
+4. Controller는 요청을 처리한 후에 객체를 반환한다.
+5. 반환되는 객체는 Json으로 Serialize되어 사용자에게 반환된다.
 
 ### PathVariable 과 ReqeustParam 차이 
 uri를 통해 전달된 값을 파라미터로 받아오는 역할을 합니다.
 ReqeustParam 은 쿼리스트링을 사용하여 값을 전달하며, PathVariable은 REST방식으로 uri 경로의 일부를 파라미터로 받아오는 역할을 합니다.
 
-### ResquestBody
+### ResquestBody 
 
 ### ResponseEntity
 Spring Framework에서 제공하는 클래스 중 HttpEntity라는 클래스가 존재한다. 이것은 HTTP 요청(Request) 또는 응답(Response)에 해당하는 HttpHeader와 HttpBody를 포함하는 클래스이다. 
