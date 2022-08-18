@@ -101,6 +101,14 @@ OAuth2 정의
 https://cheese10yun.github.io/spring-oauth2-provider/
 
 ### 마이데이터 동작 방식 
+데이터 표현 규격 - JSON/UTF-8
+데이터 통신 규격 - TLS 기반 상호인증 및 전송구간 암호화
+API 요청 및 응답 메시지 교환방식 - REST 방식 사용
+개인신용정보 전송요구 인증 규격 - OAuth 2.0
+접근토큰규격 - JWS(JSON Web Signature)
+
+API 종류 - 인증/정보제공/지원
+지원 API - 접근토큰발급/기관정보조회/서비스정보조회/통계자료전송/통합인증API호출용자격증명조회/정보수신자용자격증명조회
 
 
 ### Swagger
