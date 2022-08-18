@@ -1,4 +1,5 @@
 ## 객체지향의 개념과 Spring 특징
+(참고) : https://velog.io/@mystyle730/Chapter16-ResponseEntity-RESTful%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9C%A0-%EA%B7%9C%EC%95%BD-%EA%B5%AC%EC%A1%B0
 객체지향이란 실세계를 모델링하여 소프트웨어를 개발하는 방법론입니다. (OOP : OBJECT ORIENTED PROGRAMMING)
 객체지향의 장점으로는 코드의 재사용성을 극대화시켜 개발 및 유지보수 과정에서 효율적입니다.
 객체지향의 3대 특징으로는 추상화, 캡슐화, 상속, 다형성 있습니다. 
