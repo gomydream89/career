@@ -29,10 +29,24 @@ REST의 요소로는 크게 리소스, 메소드, 메세지 3가지 요소로 �
 메소드는 HTTP Post, 메세지는 JSON 문서를 이용해서 표현됩니다. HTTP에는 여러가지 메소드가 있지만 REST에서는 CRUD에 해당하는 4가지의 메소드 GET, POST, PUT, DELETE를 사용합니다. 
 REST는 리소스 지향 아키텍쳐 스타일이라는 정의에 맞게 모든 것을 명사로 표현하며 각 세부 리소스에는 id를 붙입니다. 
 
+### @RestController
+(참고) Controller Vs RestController : https://mangkyu.tistory.com/49
+@RestController는 @Controller에 @ResponseBody가 추가된 것입니다. 당연하게도 RestController의 주용도는 Json 형태로 객체 데이터를 반환하는 것입니다. 
+최근에 데이터를 응답으로 제공하는 REST API를 개발할 때 주로 사용하며 객체를 ResponseEntity로 감싸서 반환합니다. 
+
+https://blog.kakaocdn.net/dn/H03z4/btrx1IGclWg/cMTcF0HrJBYiahwCPsFME0/img.png
+
 ### PathVariable 과 ReqeustParam 차이 
+uri를 통해 전달된 값을 파라미터로 받아오는 역할을 합니다.
+ReqeustParam 은 쿼리스트링을 사용하여 값을 전달하며, PathVariable은 REST방식으로 uri 경로의 일부를 파라미터로 받아오는 역할을 합니다.
+
 ### ResquestBody
-### @ResponseStatus(HttpStatus.NOT_FOUND)
+
 ### ResponseEntity
+Spring Framework에서 제공하는 클래스 중 HttpEntity라는 클래스가 존재한다. 이것은 HTTP 요청(Request) 또는 응답(Response)에 해당하는 HttpHeader와 HttpBody를 포함하는 클래스이다. 
+HttpEntity 클래스를 상속받아 구현한 클래스가ResponseEntity 클래스이다. 
+ResponseEntity는 사용자의 HttpRequest에 대한 응답 데이터를 포함하는 클래스이다. 따라서 HttpBody, HttpHeaders, HttpStatus를 포함한다. 
+
 
 ### OAuth2 인증방식 (OAuth2 인증을 통한 공공 open Api 이용)
 ### Spring AOP / ExceptioHandler, ControllAdvice 
