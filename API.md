@@ -103,6 +103,11 @@ https://cheese10yun.github.io/spring-oauth2-provider/
 Oauth2 를 구현
 [https://withseungryu.tistory.com/108?category=890878](https://zaccoding.tistory.com/28)
 
+* 인증서버 (인가코드 발급을 위한)
+AuthorizationServerConfigurerAdapter 상속 - configure 메소드 오버라이딩 
+ClientDetailsServiceConfigurer 이용 - client 자격 확인
+
+
 ### 마이데이터 동작 방식 
 * 데이터 표현 규격 - JSON/UTF-8
 * 데이터 통신 규격 - TLS 기반 상호인증 및 전송구간 암호화
