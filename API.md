@@ -111,6 +111,11 @@ Oauth2 를 구현
 AuthorizationServerConfigurerAdapter 상속 - configure 메소드 오버라이딩 
 ClientDetailsServiceConfigurer 이용 - client 자격 확인
 
+* 리소스서버 
+ResourceServerConfigurerAdapter 상속 - configure 메소드 오버라이딩 
+configure () -> authorizeRequests()..mvcMatchers(HttpMethod.GET, "/api/hello") 
+인증된 api 만 요청 허용되도로 인증서버로 전달. 
+
 
 ### 마이데이터 동작 방식 
 * 데이터 표현 규격 - JSON/UTF-8
