@@ -113,7 +113,9 @@ ClientDetailsServiceConfigurer 이용 - client 자격 확인
 
 * 리소스서버 
 ResourceServerConfigurerAdapter 상속 - configure 메소드 오버라이딩 
-configure () -> authorizeRequests()..mvcMatchers(HttpMethod.GET, "/api/hello") 
+configure () -> authorizeRequests().antMatchers("/api/hello").access("#oauth2.hasScope('read')")
+                                   .anyRequest().authenticated();
+                                   
 인증된 api 만 요청 허용되도로 인증서버로 전달. 
 
 * 통합인증
