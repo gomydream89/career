@@ -116,6 +116,10 @@ ResourceServerConfigurerAdapter 상속 - configure 메소드 오버라이딩
 configure () -> authorizeRequests()..mvcMatchers(HttpMethod.GET, "/api/hello") 
 인증된 api 만 요청 허용되도로 인증서버로 전달. 
 
+* 통합인증
+![image](https://user-images.githubusercontent.com/46310329/185794631-bf6c3839-7130-49d4-bbed-378e95ab31e6.png)
+
+
 
 ### 마이데이터 동작 방식 
 * 데이터 표현 규격 - JSON/UTF-8
