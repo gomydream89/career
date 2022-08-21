@@ -23,6 +23,8 @@ HTTP는 Hyper Text Transfer Protocol의 두문자어로, 인터넷에서 데이�
 
 ### Rest API 에 대해 설명하시오.
 REST는 Representational State Transfer의 약자입니다. 
+HTTP 기반으로 데이터를 전달하는 프레임워크로써, URI로 정보의 자원을 표현하고
+자원에 대한 행위를 HTTP 메소드(GET, POST 등)로 표현합니다. 
 간단히 말해서 URI와 HTTP 메소드 및 JSON과 같은 메시지포맷을 이용해 객체화된 웹 서비스에 접근하는 것입니다.
 
 1. 클라이언트 / 서버 구조
