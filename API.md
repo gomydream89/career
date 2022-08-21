@@ -81,7 +81,11 @@ Application의 상태(State)는 Hyperlink를 통해 전이되어야 함, 서버�
 
 ### PathVariable 과 ReqeustParam 차이 
 uri를 통해 전달된 값을 파라미터로 받아오는 역할을 합니다.
-ReqeustParam 은 쿼리스트링을 사용하여 값을 전달하며, PathVariable은 REST방식으로 uri 경로의 일부를 파라미터로 받아오는 역할을 합니다.
+ReqeustParam 은 쿼리스트링을 사용하여 값을 전달하며, PathVariable은 REST방식으로 uri 경로의 일부를 파라미터로 받아오는 역할을 합니다
+Header -> Content Type
+1. application/x-www-form-urlencoded: &으로 분리되고, "=" 기호로 값과 키를 연결하는 key-value tuple로 인코딩되는 값입니다. 
+2. application/json
+
 
 ### ResquestBody /  ResponseBody
 web에서 받은 data는 java에서 사용 시 : web -> (javaObject로 변환 ) - > java에서 활용
